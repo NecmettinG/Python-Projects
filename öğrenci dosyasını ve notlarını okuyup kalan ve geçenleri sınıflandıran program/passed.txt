@@ -1,0 +1,55 @@
+Name                          Surname                       Department                    Average                       Status                        
+Eleanor                       Taylor                        Fizik                         78.4                          passed                        
+Lyla                          Dawson                        Matematik                     89.5                          passed                        
+Cora Gill                     Maryam                        Matematik Muh                 83.4                          passed                        
+Darcey                        Parker                        Fizik                         58.0                          passed                        
+Jorgie                        James                         Bilgisayar Muh                79.7                          passed                        
+Amara Allen                   Eloise                        Kimya Muh                     69.4                          passed                        
+Keira                         Khan                          Bilgisayar Muh                76.5                          passed                        
+Scarlett                      Stone                         Matematik                     89.5                          passed                        
+Arabella                      Wallace                       Bilgisayar Muh                74.8                          passed                        
+Darcey                        Woods                         Fizik                         77.9                          passed                        
+Robin                         Spencer                       Matematik                     94.9                          passed                        
+Jamie                         Dawson                        Fizik Muh                     77.9                          passed                        
+Val                           Kaur                          Matematik Muh                 76.3                          passed                        
+Morgan                        Pearson                       Bilgisayar Muh                77.9                          passed                        
+Bailey Gill                   River                         Fizik                         85.19999999999999             passed                        
+Alexis                        Hamilton                      Fizik                         77.9                          passed                        
+Shay                          Smith                         Matematik Muh                 83.0                          passed                        
+Silver                        Barker                        Matematik                     79.7                          passed                        
+Brook                         Kaur                          Matematik Muh                 73.0                          passed                        
+John                          Hunter                        Fizik                         61.2                          passed                        
+Robert                        Harper                        Kimya                         82.6                          passed                        
+Michael                       Alex                          Kimya Muh                     81.80000000000001             passed                        
+David                         Knight                        Bilgisayar Muh                77.9                          passed                        
+Charles Booth                 Hamish                        Bilgisayar Muh                62.400000000000006            passed                        
+Joseph Dillon                 Spencer                       Matematik Muh                 89.5                          passed                        
+Thomas James                  Zachary                       Gida Muh                      81.3                          passed                        
+Christopher                   Dawson                        Bilgisayar Muh                79.7                          passed                        
+Daniel                        Porter                        Fizik Muh                     68.0                          passed                        
+Paul Rufus                    Pearson                       Matematik                     81.2                          passed                        
+Mark Conor                    Smith                         Kimya Muh                     90.6                          passed                        
+Donald Kenneth                Egilmez                       Kimya Muh                     86.0                          passed                        
+Steven                        Johnson                       Fizik                         80.69999999999999             passed                        
+George                        Aston                         Kimya Muh                     73.80000000000001             passed                        
+Brian                         John                          Kimya                         80.8                          passed                        
+Ronald                        Tate                          Bilgisayar Muh                68.8                          passed                        
+Anthony                       Casper                        Fizik Muh                     64.8                          passed                        
+Kevin Maxwell                 Kennedy                       Matematik                     72.5                          passed                        
+Jason                         Rogers                        Fizik Muh                     72.5                          passed                        
+Glen                          Francis                       Fizik                         80.4                          passed                        
+Lee                           Fletcher                      Bilgisayar Muh                73.10000000000001             passed                        
+Bev                           Cunningham                    Kimya Muh                     67.8                          passed                        
+Brook                         Duncan                        Bilgisayar Muh                88.7                          passed                        
+Phoenix                       Phillips                      Matematik                     77.8                          passed                        
+Alicia Jody                   Pearson                       Fizik                         79.2                          passed                        
+Ariella                       Hamilton                      Fizik                         74.5                          passed                        
+Rose Jasmine                  Francis                       Matematik                     82.2                          passed                        
+Lara                          Mccarthy                      Kimya Muh                     79.0                          passed                        
+Jemima                        Fox                           Matematik Muh                 58.3                          passed                        
+Blossom                       Cooper                        Bilgisayar Muh                78.6                          passed                        
+Stella                        Thompson                      Fizik                         89.5                          passed                        
+Ariella                       Davies                        Fizik Müh                    71.0                          passed                        
+Lily Rose                     Kelly                         Matematik                     78.8                          passed                        
+Gabe                          Wells                         Bilgisayar Muh                73.8                          passed                        
+Jamie                         Henderson                     Matematik                     72.4                          passed                        

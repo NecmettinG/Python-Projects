@@ -1,0 +1,13 @@
+Name                          Surname                       Department                    Average                       Status                        
+Brynn                         Thomas                        Kimya Muh                     75.2                          failed                        
+James                         Harper                        Bilgisayar Muh                75.8                          failed                        
+William                       Hussain                       Fizik Muh                     69.0                          failed                        
+Richard                       Jeff                          Matematik                     61.2                          failed                        
+Martin                        Hank                          Bilgisayar Muh                79.3                          failed                        
+Kenneth                       Rogers                        Fizik                         59.699999999999996            failed                        
+Tim                           Jack                          Matematik Muh                 72.1                          failed                        
+Edward Frankie                Adams                         Fizik                         86.8                          failed                        
+Jo                            Khan                          Matematik Muh                 47.8                          failed                        
+Amalia                        Atkinson                      Fizik Muh                     70.8                          failed                        
+Marley Sienna                 Robertson                     Bilgisayar Muh                87.30000000000001             failed                        
+Taylor                        Evans                         Kimya Muh                     72.9                          failed                        
