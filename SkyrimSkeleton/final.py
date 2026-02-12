@@ -1,10 +1,13 @@
 import cv2
 import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
 import numpy as np
 import warnings
 import os
 import pygame
 from moviepy import VideoFileClip
+import urllib.request
 
 # --- 1. UYARILARI SUSTURMA ---
 # MediaPipe'ın eski protobuf versiyonlarından kaynaklanan o uzun uyarıyı engeller
@@ -15,6 +18,14 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 DOOM_THRESHOLD = -10.5  # Eşik değerin
 VIDEO_PATH = "skeleton.mp4"
 AUDIO_PATH = "skeleton_audio.mp3"
+MODEL_PATH = "face_landmarker.task"
+
+# --- MODEL DOSYASINI İNDİR (Bir kez) ---
+if not os.path.exists(MODEL_PATH):
+    print("Face Landmarker modeli indiriliyor...")
+    model_url = "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task"
+    urllib.request.urlretrieve(model_url, MODEL_PATH)
+    print("Model indirildi!")
 
 # --- SES DOSYASINI ÇIKAR (Bir kez) ---
 if not os.path.exists(AUDIO_PATH):
@@ -29,12 +40,18 @@ if not os.path.exists(AUDIO_PATH):
 pygame.mixer.init()
 pygame.mixer.music.load(AUDIO_PATH)
 
-# --- MEDIAPIPE KURULUMU ---
-mp_face_mesh = mp.solutions.face_mesh
-face_mesh = mp_face_mesh.FaceMesh(
-    min_detection_confidence=0.5,
+# --- MEDIAPIPE KURULUMU (New Tasks API) ---
+base_options = python.BaseOptions(model_asset_path=MODEL_PATH)
+options = vision.FaceLandmarkerOptions(
+    base_options=base_options,
+    output_face_blendshapes=False,
+    output_facial_transformation_matrixes=False,
+    num_faces=1,
+    min_face_detection_confidence=0.5,
+    min_face_presence_confidence=0.5,
     min_tracking_confidence=0.5
 )
+face_landmarker = vision.FaceLandmarker.create_from_options(options)
 
 # --- KAMERA VE VIDEO YÜKLEME ---
 cap = cv2.VideoCapture(0)
@@ -58,19 +75,18 @@ while cap.isOpened():
     h, w, c = image.shape
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    # Process (Yüz Tespiti)
-    image.flags.writeable = False
-    results = face_mesh.process(image_rgb)
-    image.flags.writeable = True
+    # Process (Yüz Tespiti) - New Tasks API
+    mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=image_rgb)
+    results = face_landmarker.detect(mp_image)
 
     pitch = 0  # Varsayılan
 
-    if results.multi_face_landmarks:
-        for face_landmarks in results.multi_face_landmarks:
+    if results.face_landmarks:
+        for face_landmarks in results.face_landmarks:
             face_3d = []
             face_2d = []
 
-            for idx, lm in enumerate(face_landmarks.landmark):
+            for idx, lm in enumerate(face_landmarks):
                 if idx == 33 or idx == 263 or idx == 1 or idx == 61 or idx == 291 or idx == 199:
                     x, y = int(lm.x * w), int(lm.y * h)
                     face_2d.append([x, y])
