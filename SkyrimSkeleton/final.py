@@ -130,7 +130,7 @@ while cap.isOpened():
             video_frame = cv2.resize(video_frame, (400, 400))
 
             # POP-UP PENCERE AÇ
-            cv2.imshow('CEZA ALANI', video_frame)
+            cv2.imshow('RAAAAAGGHH', video_frame)
 
             # Ses çalmaya başla (sadece ilk açılışta)
             if not is_audio_playing:
@@ -140,13 +140,13 @@ while cap.isOpened():
             is_video_window_open = True
 
             # Ana ekrana uyarı
-            cv2.putText(image, "TELEFONU BIRAK!", (50, h // 2), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 3)
+            cv2.putText(image, "TELEFONU KAPATIYORSUN KARDESIM!", (50, h // 2), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 3)
 
     else:
         # Kafa Yukarıda -> Pencereyi Kapat ve Videoyu Resetle
         if is_video_window_open:
             try:
-                cv2.destroyWindow('CEZA ALANI')
+                cv2.destroyWindow('RAAAAAGGHH')
             except:
                 pass  # Pencere zaten kapalıysa hata vermesin
 
@@ -159,7 +159,7 @@ while cap.isOpened():
             is_video_window_open = False
 
     # Ana kamera görüntüsü (Her zaman açık)
-    cv2.imshow('Kamera Takip', image)
+    cv2.imshow('DoomScrolling Detector', image)
 
     if cv2.waitKey(5) & 0xFF == ord('q'):
         break
